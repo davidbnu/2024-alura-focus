@@ -1,0 +1,83 @@
+Aula 01
+    //encontrar o botão para adicioanr tarefa
+        .app__button--add-task e .app__form-add-task
+    
+    //No click do botão, tirar a classe hidden do formulario(fazer ele aparece);
+    //toggle (se tiver a classe ele tira se não tiver é colocado novamente.)
+
+Agora é quando a pessoa clicar em Adicionar nova tarefa, vai pegar o texto do textArea e jogar para uma 
+lista.
+
+    //Pegar o text area
+    //No form, adicionar o evento submit passando o event como parametro.
+        //tirar o comportamento de submit do form
+            //event.preventDefault();
+    
+    //Pega o valor digitado no textArea = textArea.value
+        //criar um objeto que representa a tarefa
+        //  const tarefa = {descriao: textArea.value}
+        
+    //Criar lista de tarefas 
+        const tarefas = []; //Assim se cria um array vazio.
+        //Inserir o textDaTextArea na lista.
+        // tarefas.push(tarefa);
+    
+    //armazenamentoLocal
+        localStorage.setItem('tarefas');
+Aula 02
+    Aprendizados
+        document.createElement('li') //Criar elemento
+        const svg = document.createElement('svg');
+            svg.innerHTML = `<svg>
+                                <svg class="app__section-task-icon-status" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="12" cy="12" r="12" fill="#FFF"></circle>
+                                    <path d="M9 16.1719L19.5938 5.57812L21 6.98438L9 18.9844L3.42188 13.4062L4.82812 12L9 16.1719Z" fill="#01080E"></path>
+                                </svg></svg>`;
+        paragrafo.textContent = tarefa; // Passar um texto para uma tag.
+
+        //adicionar um elemento dentro do outro
+        botao.append(imagem);
+        li.append(svg);
+        li.append(paragrafo);
+        li.append(botao);
+
+    Criar a função que cria tarefas
+        Quando a aplicação é carregada, devemos carregar as tarefas e criar elas novamente na tela.
+        //O elemento html da tarefa.
+            <li class="app__section-task-list-item">
+                <svg>
+                    <svg class="app__section-task-icon-status" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="12" fill="#FFF"></circle>
+                        <path d="M9 16.1719L19.5938 5.57812L21 6.98438L9 18.9844L3.42188 13.4062L4.82812 12L9 16.1719Z" fill="#01080E"></path>
+                    </svg>
+                </svg>
+                <p class="app__section-task-list-item-description">
+                    Estudando localStorage
+                </p>
+                <button class="app_button-edit">
+                    <img src="/imagens/edit.png">
+                </button>
+            </li>
+
+        Função criar a tarefa.
+            criarElelementoTarefa(elemento)
+            const li = document.createElement('li'); //Aqui estamos criando um elemento
+            Adicionar a classe app__section-task-list-item
+            criar o elemento svg
+            Fazer o sgv.innerHTML = ``
+            Criar o elemento paragrafo
+            Adicionar a descrição ao paragrafo (textContent)
+            criar o botao
+            Adicionar a classe app_button-edit
+            criar uma imagem
+            img.setAttribute('src','/imagens/edit.png');
+
+            Para colocar a imagem dentro do botão
+            botao.append(imagemBotao)
+
+            depois colocar tudo dentro do li
+            li.append(svg)
+            li.append(paragrafo)
+            li.append(botao)
+    
+        
